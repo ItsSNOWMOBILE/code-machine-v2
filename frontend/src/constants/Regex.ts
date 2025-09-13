@@ -9,14 +9,14 @@ export const WHITESPACE_REGEX = /\s+/g;
 export const COMMENT_REGEX = /^(#|\/\/).*$/;
 
 /**
- * Regex pour identifier un mot de lettre
+ * Regex pour identifier un mot (autorise début par chiffre, exige au moins une lettre)
  */
-export const WORD_REGEX = /^[a-z]+$/;
+export const WORD_REGEX = /^(?=.*[A-Za-z])[A-Za-z0-9_]+$/;
 
 /**
- * Regex pour identifier une étiquette
+ * Regex pour identifier une étiquette (autorise début par chiffre, exige au moins une lettre)
  */
-export const LABEL_REGEX = /^[a-z]+:$/;
+export const LABEL_REGEX = /^(?=.*[A-Za-z])[A-Za-z0-9_]+:$/;
 
 /**
  * Regex pour détecter les opérations du processeur à accumulateur
